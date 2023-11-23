@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NTC Ticket Tracker</title>
+  <link rel="shortcut icon" class="favicon" href="./assets/img/favicons.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+
+</head>
+
+<script>
+
+
+
+</script>
+
+
+<body>
+
+  <!-- ========== form Section start ========== -->
+  <div class="loader-container">
+    <div class="loader">
+
+    </div>
+  </div>
+
+  <div class="main" style="display:none">
+    <!-- <h1 style="margin:10px">NTC Ticket Tracker </h1> -->
+    <div class="container">
+      <!-- <div class="form-img owl-carousel">
+        <img src="./assets/img/ticket-illustrator.png" alt="" class="img-fluid myimg ">
+      </div> 
+     -->
+
+      <section class="carousel-container">
+        <div class="slider__wrapper">
+          <div class="slider">
+            <div id="slide1">
+              <img src="./assets/img/tictrack-img.png" alt="">
+
+              <div class="img-desc">
+                <h2>
+                  slide-1
+
+                </h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Veniam praesentium hic voluptas quae eaque.
+                  Eum aut excepturi aliquid consequuntur, ducimus unde,
+                  modi, ut suscipit deserunt esse quisquam quasi reprehenderit sapiente.</p>
+              </div>
+            </div>
+
+            <div id="slide2">
+              <img src="./assets/img/tictrack-img.png" alt="">
+              <div class="img-desc">
+                <h2>slide-2</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Veniam praesentium hic voluptas quae eaque.
+                  Eum aut excepturi aliquid consequuntur, ducimus unde,
+                  modi, ut suscipit deserunt esse quisquam quasi reprehenderit sapiente.</p>
+              </div>
+            </div>
+
+            <div id="slide3">
+              <img src="./assets/img/tictrack-img.png" alt="">
+              <div class="img-desc">
+                <h2>slide-3</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Veniam praesentium hic voluptas quae eaque.
+                  Eum aut excepturi aliquid consequuntur, ducimus unde,
+                  modi, ut suscipit deserunt esse quisquam quasi reprehenderit sapiente.</p>
+              </div>
+
+            </div>
+
+            <div id="slide4">
+              <img src="./assets/img/tictrack-img.png" alt="">
+              <div class="img-desc">
+                <h2>slide-4</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Veniam praesentium hic voluptas quae eaque.
+                  Eum aut excepturi aliquid consequuntur, ducimus unde,
+                  modi, ut suscipit deserunt esse quisquam quasi reprehenderit sapiente.</p>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="slider__nav">
+            <a id="btn1" href="#slide1"></a>
+            <a id="btn2" href="#slide2"></a>
+            <a id="btn3" href="#slide3"></a>
+            <a id="btn4" href="#slide4"></a>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="login-form">
+        <h2 class="login-form--heading">Log In</h2>
+        <h3 class="login-form-title">Welcome back to NTC Ticket Tracker</h3>
+        <form action="index.html" id="loginform">
+          <div class="input-fields">
+            <input type="text" id="username" placeholder="User Name" autocomplete="off">
+            <input type="text" id="pass" placeholder="User Passsword" autocomplete="off">
+            <button type="submit" class="login-form--btn">Log In</button>
+            <div class="account">
+              <P><a href="Passverify.html">forgot password?</a> </P>
+            </div>
+          </div>
+        </form>
+        <div class="account">
+          <p>
+            Don't have an account?
+            <a href="signup.html">Register</a>
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- copyright-->
+    <!-- <div class="copyright">
+      <p class="copy-footer-29">© 2023 Ntc Ticket Tracker System. All rights reserved <a
+          href="https://www.ntcgroup.in">ntcgroup </a></p>
+    </div> -->
+    <!-- //copyright-->
+
+  </div>
+
+
+  <!-- ========== form Section End  ========== -->
+</body>
+<script src="./assets/js/carousel.js" type="text/javascript"></script>
+<script>
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    setTimeout(() => {
+      document.querySelector(".loader-container").style.display = 'none';
+      document.querySelector(".main").style.display = 'block';
+      // document.querySelector("body").classList.add('slide-fwd-center');
+    }, 1500)
+  })
+
+
+  var myform = document.getElementById("loginform");
+  console.log(myform);
+  myform.addEventListener('submit', function (e) {
+    console.log('hi');
+    e.preventDefault();
+    var uname = document.getElementById('username');
+    var passcheck = document.getElementById('pass');
+    var regex = /^(?=.*[-\#\$\.\%\&\@\!\+\=\<\>\*])(?=.*[a-zA-Z])(?=.*\d).{8,12}$/;
+    var password = "P@ssw0rd";
+    var result = regex.test(password);
+
+    if (uname.value == "") {
+      alert("Please Enter your user Name!");
+
+    }
+    else if (passcheck == "") {
+      alert("please enter your password");
+    }
+
+    else if (passcheck.value.match(result)) {
+      alert("your password should contain at least one number and one special character ")
+    }
+
+    else {
+      myform.submit();
+      // alert("This form has been successfully submitted!");
+      // console.log(
+      // `This form has a username of ${uname.value} and password of ${passcheck.value}`);
+      // uname.value = "";
+      // passcheck.value = "";
+    }
+
+  });
+</script>
+
+</html>
+
+<!-- // var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+// var password = "P@ssw0rd";
+// var result = regex.test(password); -->
+
+<!-- //  if (!regex.test(passcheck)) {
+  //   alert("password should contain atleast one number and one special character");
+  //   return false;
+  // }
+ -->

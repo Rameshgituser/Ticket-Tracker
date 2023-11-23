@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <script>
+        function myfunc() {
+            window.location.href = "signin.html";
+        }
+        function changepass() {
+
+            var username = document.getElementById("uname").value;
+            var securityoptions = document.getElementById("securityoption").value;
+            var answer = document.getElementById("ans").value;
+
+            if (username == "") {
+                alert("please enter user name");
+                 return false;
+            }
+            else if (securityoptions == "") {
+
+                alert('please select options');
+                return false;
+
+            }
+            else if (answer == "") {
+
+                alert('please enter your answers');
+                return false;
+
+            }
+            else {
+
+                return true;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="container-div">
+            <div class="changepass-div">
+                <h2 class="changepass-div--heading">PassWord Verification</h2>
+                <div class="pass-input">
+                 <label for="">User Name</label>
+                <input type="text" id="uname" placeholder="Enter User Name" autocomplete="off">
+                    <label for="">Security Questions</label>
+                    <input type="text" id="securityoption" placeholder="select" autocomplete="off">
+                    <label for="">Answers</label>
+                    <input type="text" id="ans" placeholder="Enter Your Answers" autocomplete="off">
+                </div>
+                <div class="buttons">
+                    <button type="submit" onclick="changepass()" class="btn btn-submit">Save</button>
+                    <button type="button" class=" btn btn-reset">Reset</button>
+                    <button type="button" onclick="myfunc()" class="btn btn-back">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
